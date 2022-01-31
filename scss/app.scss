@@ -1,9 +1,17 @@
-$primary: blue;
-$tertiary: goldenrod;
+$primary: #003e7a;
+$secondary: #ebf2fa;
+//$tertiary: goldenrod;
+//
+//$theme-colors: (
+//  "tertiary": $tertiary,
+//);
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif !default;
 
-$theme-colors: (
-  "tertiary": $tertiary,
-);
-
+.p-1 {
+  padding: 100rem !important;
+}
 
 @import "bootstrap/bootstrap";

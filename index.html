@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <title>WCTC</title>
     <!-- Bootstrap core CSS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+
 </head>
-<body>
+<body class="text-primary">
+    <section class="container">
+        <form action="/search.php" class="navbar-form-mobile" role="search" id="mobileSearch" aria-label="Mobile Search">
+            <div class="form-group">
+                <label class="sr-only" for="msearch">Mobile Site Search</label>
+                <input type="text" id="msearch" name="q" class="form-control" placeholder="Search" tabindex="-1">
+            </div>
+            <button type="submit" class="wctcicon-search" tabindex="-1">
+                <span class="sr-only">Submit Mobile Search</span>
+            </button>
+        </form>
+        <ul class="nav navbar-nav navbar-right" id="tertMenu" aria-label="Tertiary Navigation" data-smartmenus-id="1643595803958649">
+            <li><a title="MyWCTC" href="http://mywctc.wctc.edu" target="_blank" tabindex="0">MyWCTC</a></li>
+            <li><a title="Alumni" href="/alumni/index.php" tabindex="0">Alumni</a></li>
+            <li><a title="WCTC Foundation" href="/foundation/index.php" tabindex="0">Foundation</a></li>
+            <li><a title="Technology" href="/technology.php" tabindex="0">Technology</a></li>
+            <li class="searchTrigger hidden-xs"><button class="wctcicon-search" type="button" tabindex="0" aria-label="Open Desktop Search"><span class="sr-only">Open Search</span></button></li>
+        </ul>
+    </section>
     <div class="container-fluid">
         <header class="container-fluid">
 
@@ -40,35 +62,350 @@
                 </div>
             </nav>
         </header>
+
         <section class="container-fluid">
             <img width="100%" class="img-fluid" src="./images/it-database-specialist-bl.jpg" alt="IT class">
         </section>
-        <section class="container">
+
+        <section class="container p-5">
             <div class="row">
                 <div class="col">
-                    Column
+                    <nav>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Program Information</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                 <div class="colLeft">
+                                    <div class="group">
+                                        <p class="title">Degree Type</p>
+                                        <p class="value">63-credit Associate of Applied Science Degree</p>
+                                    </div>
+                                    <div class="group">
+                                        <p class="title">Program Code</p>
+                                        <p class="value">10-156-3</p>
+                                    </div>
+                                    <div class="group">
+                                        <p class="title">Time to Degree</p>
+                                        <p class="value">2 years</p>
+                                    </div>
+                                    <div class="group">
+                                        <p class="title">Start Date</p>
+                                        <p class="value">August/January/June</p>
+                                    </div>
+                                </div>
+                                <div class="colRight">
+                                    <p class="title">How You'll Learn</p>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
                 </div>
                 <div class="col">
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+                        <li class="nav-item text-secondary" role="presentation">
+                            <a class="nav-link active text-secondary" id="pills-program-tab" data-toggle="pill" href="#pills-program" role="tab" aria-controls="pills-program" aria-selected="true">Program Overview</a>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+                        <li class="nav-item text-secondary" role="presentation">
+                            <a class="nav-link" id="pills-app-tab" data-toggle="pill" href="#pills-app" role="tab" aria-controls="pills-app" aria-selected="false">Application Deadlines</a>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+                        <li class="nav-item text-secondary" role="presentation">
+                            <a class="nav-link text-secondary" id="pills-cost-tab" data-toggle="pill" href="#pills-cost" role="tab" aria-controls="pills-cost" aria-selected="false">Program Cost</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+                        <div class="tab-pane fade show active" id="pills-program" role="tabpanel" aria-labelledby="pills-program-tab">
+                            <p>
+                                Prepare for a variety of careers in the rapidly-growing field of data. Gain skills in data modeling, database development, report development, and data warehouse design and development. Explore the basics of programming, data visualization, statistical data analysis and data analytics.
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="pills-app" role="tabpanel" aria-labelledby="pills-app-tab">
+                            <div class="container">
+                                <h4>Deadlines To Know*</h4>
+                                <h5>Fall 2022 Start</h5>
+                                <ul>
+                                    <li>Submit application by August 1, 2022</li>
+                                    <li>Complete checklist items by August 8, 2022</li>
+                                </ul>
+                                <h5>Spring 2022 Start</h5>
+                                <ul>
+                                    <li>Submit application by January 3, 2022</li>
+                                    <li>Complete checklist items by January 10, 2022</li>
+                                </ul>
+                                <h5>Summer 2022 Start</h5>
+                                <ul>
+                                    <li>No information available.</li>
+                                </ul>
+                                <i>* Application deadlines are subject to change based on program demand.</i>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-cost" role="tabpanel" aria-labelledby="pills-cost-tab">
+                            <h5>Tuition Costs</h5>
+                            <p>The cost of your degree depends on a number of factors, including where you live, how your program is delivered, how long it takes to finish your program and the financial aid you receive. Explore current tuition and fees.
+                            </p>
+                            <h5>Additional Estimated Costs</h5>
+                            <ul>
+                                <li>Any laptop with at least 16GB memory and 500GB disk space</li>
+                                <li>500GB SSD external hard drive</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section class="container">
+            <h3>Program Details</h3>
+            <div class="container p-3">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    CONTACT US
+                                </button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                Questions? We'd love to help! Connect with our Outreach team by filling out our online form or by email at outreach@wctc.edu.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    POTENTIAL CAREERS
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>
+                                    If you are a patient, critical thinker and have strong analytical and reasoning skills, a job as a database specialist might be right for you. Those who work in these roles are dependable and adaptable, and they have a willingness to learn new technologies to stay current and advance in their careers.
+                                <ul>
+                                    <li>Database Developer</li>
+                                    <li>Database Administrator</li>
+                                    <li>Data Analyst</li>
+                                    <li>Report Developer</li>
+                                    <li>Business Intelligence Developer</li>
+                                    <li>Data Warehouse Developer</li>
+                                </ul>
+                                Learn more about financial aid.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    HIGH SCHOOL ELIGIBILITY
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                This program is open to qualified high school applicants. Learn more >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    CAREER SALARIES
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                $85,000 – $100,000 annually
+
+                                Salary range estimates based on wages for related occupations in Waukesha County as reported by Economic Modeling Specialists International (EMSI). Individual wages may vary based on experience, industry, location and specific job requirements.
+
+                                Check the WCTC Graduate Success Report to view our graduates’ entry wages.                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    FINANCIAL AID
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>
+                                    As a program student, you are eligible to receive:
+                                    <ul>
+                                        <li>Financial aid loans
+                                        </li>
+                                        <li>Scholarships
+                                        </li>
+                                        <li>Other forms of assistance
+                                        </li>
+                                    </ul>
+                                    Learn more about financial aid.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="container-fluid bg-secondary">
+            <div class="container p-4">
+                <h2>How To Apply</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <ul>
+                                <li>Apply online and pay the $30 application fee.</li>
+                                <li>Submit official high school transcript.</li>
+                                <li>Complete placement assessment.
+                                    <ul>
+                                        <li>
+                                            High school GPA of 2.60 or higher cannot satisfy the math requirement for this program.
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                            <p><span class="font-weight-bold">Questions on the application process?</span> Visit the Admissions page or contact an Admissions Advisor</p>
+                        </div>
+                        <div class="col-sm">
+                            <button type="button" class="btn btn-warning">Apply Online</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="container p-5">
+            <div class="row text-primary">
+                <div class="col-sm">
+                    <h3>What Makes This Program Unique?</h3>
+                    <div class="media">
+                        <img src="./images/number1.JPG" class="align-self-start mr-3" alt="...">
+                        <div class="media-body">
+                           <p>Leverage current industry-standard tools including Microsoft SQL Server, the Microsoft BI stack (SSRS, SSIS, SSAS), Tableau and Power BI. Learn the basics of programming in C# and Python.</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <img src="./images/num2.JPG" class="align-self-start mr-3" alt="...">
+                        <div class="media-body">
+                            <p>Participate in a capstone project to develop data-driven applications for stakeholders on campus.</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <img src="./images/num3.JPG" class="align-self-start mr-3" alt="...">
+                        <div class="media-body">
+                            <p>Earn two degrees in three years by combining IT - Data Specialist with IT - Web and Software Developer. Learn more about this dual degree option.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <img width="100%" class="img-fluid" src="./images/it-database-specialist-b.jpg" alt="IT class">
+                </div>
+            </div>
+        </div>
+
+        <section class="container p-5">
+            <h3>Similar Programs</h3>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="./images/it-web-and-software-developer.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">IT-Web and Software Developer</h5>
+                    <p class="card-text">Creating interactive, inviting and functional web applications requires the skills of a web...</p>
+                    <a href="#" class="btn btn-primary">LEARN MORE</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container p-5">
+            <h3>Related Certificates</h3>
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="col-sm">
+                        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Database Developer</p>
+                                <p class="card-text">Learn how to create and maintain databases, SQL scripts and stored procedures. Develop skills to integrate systems and build applications that are tightly integrated with databases. Explore Microsoft SQL Server and the C# programming language.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Database Server Administrator</p>
+                                <p class="card-text">Learn how to install, upgrade and maintain the day-to-day operations of database servers. Explore task scripting and automation, business continuity and disaster recovery. Gain hands-on experience using Windows Server, Microsoft SQL Server and PowerShell.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Business System Analyst</p>
+                                <p class="card-text">Business systems analysts support business applications that rely on databases. In this certificate, learn the basics of networking and support. Develop knowledge to perform user management and permissions in SQL Server, learn the basic of reporting in Microsoft Access, and discover how to create and interpret database diagrams.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container p-5">
+            <h3>More Credit Opportunities</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="card border-success mb-3" style="max-width: 36rem;">
+                            <div class="card-header bg-transparent border-success">
+                                <h5 class="card-title">HIGH SCHOOL DUAL CREDIT</h5>
+                            </div>
+                            <div class="card-body text-success">
+                                <p class="card-text">Dual enrollment offers high school students an opportunity to get a head start in high-demand fields while earning college credits.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-success">
+                                <button type="button" class="btn btn-info">LEARN MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="card border-success mb-3" style="max-width: 36rem;">
+                            <div class="card-header bg-transparent border-success">
+                                <h5 class="card-title">CREDIT FOR PRIOR LEARNING</h5>
+                            </div>
+                            <div class="card-body text-success">
+                                <p class="card-text">You may have the opportunity to obtain credit for the college-level skills and knowledge you've already acquired through prior coursework, work experience and more.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-success">
+                                <button type="button" class="btn btn-warning">LEARN MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h3>Transfer Opportunities After WCTC</h3>
+            <p>WCTC has credit transfer agreements with many four-year institutions that allow our degree graduates to transfer credits into a baccalaureate program, often at junior-level standing.</p>
+        </section>
     </div>
 </body>
+<footer>
+
+</footer>
 </html>
