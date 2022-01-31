@@ -17,21 +17,24 @@
                 <label class="sr-only" for="msearch">Mobile Site Search</label>
                 <input type="text" id="msearch" name="q" class="form-control" placeholder="Search" tabindex="-1">
             </div>
-            <button type="submit" class="wctcicon-search" tabindex="-1">
-                <span class="sr-only">Submit Mobile Search</span>
-            </button>
         </form>
-        <ul class="nav navbar-nav navbar-right" id="tertMenu" aria-label="Tertiary Navigation" data-smartmenus-id="1643595803958649">
-            <li><a title="MyWCTC" href="http://mywctc.wctc.edu" target="_blank" tabindex="0">MyWCTC</a></li>
-            <li><a title="Alumni" href="/alumni/index.php" tabindex="0">Alumni</a></li>
-            <li><a title="WCTC Foundation" href="/foundation/index.php" tabindex="0">Foundation</a></li>
-            <li><a title="Technology" href="/technology.php" tabindex="0">Technology</a></li>
-            <li class="searchTrigger hidden-xs"><button class="wctcicon-search" type="button" tabindex="0" aria-label="Open Desktop Search"><span class="sr-only">Open Search</span></button></li>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">MyWCTC</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Aliumni</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Foundation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Technology</a>
+            </li>
         </ul>
     </section>
     <div class="container-fluid">
         <header class="container-fluid">
-
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
                     <a class="navbar-brand" href="#">
@@ -64,7 +67,12 @@
         </header>
 
         <section class="container-fluid">
-            <img width="100%" class="img-fluid" src="./images/it-database-specialist-bl.jpg" alt="IT class">
+            <div class="d-flex">
+                <img width="100%" class="img-fluid" src="./images/it-database-specialist-bl.jpg" alt="IT class">
+                <h1 class="carousel-caption">IT - Data Specialist
+                    <video class="ml-auto" id="loopedVideo" autoplay="" loop="" muted="" playsinline="" src="./images/it-database-specialist-masks.mp4"></video>
+                    </h1>
+            </div>
         </section>
 
         <section class="container p-5">
@@ -258,6 +266,18 @@
                     </div>
                 </div>
             </div>
+            <div class="container p-3">
+                <div class="row">
+                    <div class="col">
+                        <img class="card-img-top" src="./images/program-courses-students-studying-b.jpg" alt="Card image cap">
+                        <h3 class="carousel-caption">Program Courses</h3>
+                    </div>
+                    <div class="col">
+                        <img class="card-img-top" src="./images/program-pdf-student-studying-b.jpg" alt="Card image cap">
+                        <h3 class="carousel-caption">Program and Pathway PDF</h3>
+                    </div>
+                </div>
+            </div>
 
         </section>
 
@@ -338,26 +358,26 @@
             <div class="container">
                 <div class="row row-eq-height">
                     <div class="col-sm">
-                        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <div class="card text-primary bg-secondary mb-3" style="max-width: 18rem;">
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Database Developer</p>
-                                <p class="card-text">Learn how to create and maintain databases, SQL scripts and stored procedures. Develop skills to integrate systems and build applications that are tightly integrated with databases. Explore Microsoft SQL Server and the C# programming language.</p>
+                                <p class="card-text">Learn how to create and maintain databases, SQL scripts and stored procedures...</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <div class="card text-primary bg-secondary mb-3" style="max-width: 18rem;">
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Database Server Administrator</p>
-                                <p class="card-text">Learn how to install, upgrade and maintain the day-to-day operations of database servers. Explore task scripting and automation, business continuity and disaster recovery. Gain hands-on experience using Windows Server, Microsoft SQL Server and PowerShell.</p>
+                                <p class="card-text">Learn how to install, upgrade and maintain the day-to-day operations of database servers...</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                        <div class="card text-primary bg-secondary mb-3" style="max-width: 18rem;">
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Business System Analyst</p>
-                                <p class="card-text">Business systems analysts support business applications that rely on databases. In this certificate, learn the basics of networking and support. Develop knowledge to perform user management and permissions in SQL Server, learn the basic of reporting in Microsoft Access, and discover how to create and interpret database diagrams.</p>
+                                <p class="card-text">Business systems analysts support business applications that rely on databases...</p>
                             </div>
                         </div>
                     </div>
@@ -370,27 +390,27 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm">
-                        <div class="card border-success mb-3" style="max-width: 36rem;">
-                            <div class="card-header bg-transparent border-success">
+                        <div class="card bg-secondary mb-3" style="max-width: 36rem;">
+                            <div class="card-header bg-info">
                                 <h5 class="card-title">HIGH SCHOOL DUAL CREDIT</h5>
                             </div>
-                            <div class="card-body text-success">
+                            <div class="card-body text-primary">
                                 <p class="card-text">Dual enrollment offers high school students an opportunity to get a head start in high-demand fields while earning college credits.</p>
                             </div>
-                            <div class="card-footer bg-transparent border-success">
+                            <div class="card-footer bg-transparent ">
                                 <button type="button" class="btn btn-info">LEARN MORE</button>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="card border-success mb-3" style="max-width: 36rem;">
-                            <div class="card-header bg-transparent border-success">
+                        <div class="card  bg-secondary mb-3" style="max-width: 36rem;">
+                            <div class="card-header bg-warning">
                                 <h5 class="card-title">CREDIT FOR PRIOR LEARNING</h5>
                             </div>
-                            <div class="card-body text-success">
+                            <div class="card-body text-primary">
                                 <p class="card-text">You may have the opportunity to obtain credit for the college-level skills and knowledge you've already acquired through prior coursework, work experience and more.</p>
                             </div>
-                            <div class="card-footer bg-transparent border-success">
+                            <div class="card-footer bg-transparent ">
                                 <button type="button" class="btn btn-warning">LEARN MORE</button>
                             </div>
                         </div>
@@ -402,6 +422,31 @@
         <section class="container">
             <h3>Transfer Opportunities After WCTC</h3>
             <p>WCTC has credit transfer agreements with many four-year institutions that allow our degree graduates to transfer credits into a baccalaureate program, often at junior-level standing.</p>
+            <div class="container">
+                <p>
+                    <a class="btn btn-primary btn-lg btn-block" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">PROGRAM SPECIFIC TRANSFER AGREEMENTS</a>
+                </p>
+                <div class="row p-1">
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <div class="card card-body">
+                            There are no credit transfer agreements for this program at this time. For more information, contact your academic advisor.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <p>
+                    <button class="btn btn-primary btn-lg btn-block" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">GENERAL TRANSFER AGREEMENTS</button>
+                </p>
+                <div class="row p-1">
+                    <div class="collapse multi-collapse" id="multiCollapseExample2">
+                        <div class="card card-body">
+                            There are no credit transfer agreements for this program at this time. For more information, contact your academic advisor.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </div>
 </body>
