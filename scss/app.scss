@@ -22,9 +22,31 @@ $warning: #fcde78;
 //  //third
 
 //}
+//.container d-flex{
+//  position: absolute;
+//}
+//.text-block {
+//  position: absolute;
+//}
+
+#heroshot {
+  width: 100%;
+  height: 400px;
+}
 
 .tab-content {
   background-color: #ebf2fa;
+}
+
+.dropdown {
+  font-weight: bold;
+}
+.title {
+  font-weight: bold;
+}
+
+.title {
+  font-weight: bold;
 }
 
 #something {
@@ -41,3 +63,4 @@ $warning: #fcde78;
 .navbar * {
   //fourth any nav bar and any child
 }
+
