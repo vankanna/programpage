@@ -1,16 +1,43 @@
+//override all variable
+
 $primary: #003e7a;
 $secondary: #ebf2fa;
 $warning: #fcde78;
+
+
 //$tertiary: goldenrod;
 //
 //$theme-colors: (
 //  "tertiary": $tertiary,
 //);
-$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-sans-serif !default;
 
 //border-success
 
 @import "bootstrap/bootstrap";
+//way1: put under the import to override!
+
+//h4 {
+//  border-bottom: 2px solid $primary;
+//  font-size: 2rem;
+//  //third
+
+//}
+
+.tab-content {
+  background-color: #ebf2fa;
+}
+
+#something {
+  //always first precedence
+}
+.somethingElse {
+  //second
+}
+//sudo selectors are the last thing
+:disabled, * {
+  //fourth
+}
+
+.navbar * {
+  //fourth any nav bar and any child
+}

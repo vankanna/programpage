@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>WCTC</title>
@@ -33,7 +33,6 @@
             </li>
         </ul>
     </section>
-    <div class="container-fluid">
         <header class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container">
@@ -68,7 +67,7 @@
 
         <section class="container-fluid">
             <div class="d-flex">
-                <img width="100%" class="img-fluid" src="./images/it-database-specialist-bl.jpg" alt="IT class">
+                <img width="100%" height="225" class="img-fluid" src="./images/it-database-specialist-bl.jpg" alt="IT class">
                 <h1 class="carousel-caption">IT - Data Specialist
                     <video class="ml-auto" id="loopedVideo" autoplay="" loop="" muted="" playsinline="" src="./images/it-database-specialist-masks.mp4"></video>
                     </h1>
@@ -77,11 +76,11 @@
 
         <section class="container p-5">
             <div class="row">
-                <div class="col">
+                <div class="col-xs">
                     <nav>
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Program Information</a>
+                                <a class="nav-link active text-primary font-weight-bold" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Program Information</a>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
@@ -111,23 +110,26 @@
                         </div>
                     </nav>
                 </div>
-                <div class="col">
+                <div class="col boarder">
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item text-secondary" role="presentation">
-                            <a class="nav-link active text-secondary" id="pills-program-tab" data-toggle="pill" href="#pills-program" role="tab" aria-controls="pills-program" aria-selected="true">Program Overview</a>
+                            <a class="nav-link active font-weight-bold" id="pills-program-tab" data-toggle="pill" href="#pills-program" role="tab" aria-controls="pills-program" aria-selected="true">Program Overview</a>
                         </li>
                         <li class="nav-item text-secondary" role="presentation">
-                            <a class="nav-link" id="pills-app-tab" data-toggle="pill" href="#pills-app" role="tab" aria-controls="pills-app" aria-selected="false">Application Deadlines</a>
+                            <a class="nav-link font-weight-bold" id="pills-app-tab" data-toggle="pill" href="#pills-app" role="tab" aria-controls="pills-app" aria-selected="false">Application Deadlines</a>
                         </li>
                         <li class="nav-item text-secondary" role="presentation">
-                            <a class="nav-link text-secondary" id="pills-cost-tab" data-toggle="pill" href="#pills-cost" role="tab" aria-controls="pills-cost" aria-selected="false">Program Cost</a>
+                            <a class="nav-link font-weight-bold" id="pills-cost-tab" data-toggle="pill" href="#pills-cost" role="tab" aria-controls="pills-cost" aria-selected="false">Program Cost</a>
                         </li>
                     </ul>
-                    <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-content border" id="pills-tabContent">
+
                         <div class="tab-pane fade show active" id="pills-program" role="tabpanel" aria-labelledby="pills-program-tab">
-                            <p>
-                                Prepare for a variety of careers in the rapidly-growing field of data. Gain skills in data modeling, database development, report development, and data warehouse design and development. Explore the basics of programming, data visualization, statistical data analysis and data analytics.
-                            </p>
+                            <div class="container">
+                                <div class="p-2">
+                                    Prepare for a variety of careers in the rapidly-growing field of data. Gain skills in data modeling, database development, report development, and data warehouse design and development. Explore the basics of programming, data visualization, statistical data analysis and data analytics.
+                                </div>
+                            </div>
                         </div>
                         <div class="tab-pane fade" id="pills-app" role="tabpanel" aria-labelledby="pills-app-tab">
                             <div class="container">
@@ -150,14 +152,16 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="pills-cost" role="tabpanel" aria-labelledby="pills-cost-tab">
-                            <h5>Tuition Costs</h5>
-                            <p>The cost of your degree depends on a number of factors, including where you live, how your program is delivered, how long it takes to finish your program and the financial aid you receive. Explore current tuition and fees.
-                            </p>
-                            <h5>Additional Estimated Costs</h5>
-                            <ul>
-                                <li>Any laptop with at least 16GB memory and 500GB disk space</li>
-                                <li>500GB SSD external hard drive</li>
-                            </ul>
+                            <div class="container">
+                                <h5>Tuition Costs</h5>
+                                <p>The cost of your degree depends on a number of factors, including where you live, how your program is delivered, how long it takes to finish your program and the financial aid you receive. Explore current tuition and fees.
+                                </p>
+                                <h5>Additional Estimated Costs</h5>
+                                <ul>
+                                    <li>Any laptop with at least 16GB memory and 500GB disk space</li>
+                                    <li>500GB SSD external hard drive</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -171,7 +175,7 @@
                     <div class="card">
                         <div class="card-header" id="headingOne">
                             <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <button class="btn btn-link font-weight-bold" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     CONTACT US
                                 </button>
                             </h5>
@@ -186,7 +190,7 @@
                     <div class="card">
                         <div class="card-header" id="headingTwo">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <button class="btn btn-link collapsed font-weight-bold" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     POTENTIAL CAREERS
                                 </button>
                             </h5>
@@ -211,7 +215,7 @@
                     <div class="card">
                         <div class="card-header" id="headingThree">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <button class="btn btn-link collapsed font-weight-bold" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     HIGH SCHOOL ELIGIBILITY
                                 </button>
                             </h5>
@@ -225,7 +229,7 @@
                     <div class="card">
                         <div class="card-header" id="headingFour">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <button class="btn btn-link collapsed font-weight-bold" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     CAREER SALARIES
                                 </button>
                             </h5>
@@ -242,13 +246,13 @@
                     <div class="card">
                         <div class="card-header" id="headingFive">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <button class="btn btn-link collapsed font-weight-bold" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                     FINANCIAL AID
                                 </button>
                             </h5>
                         </div>
                         <div id="collapseFive" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                            <div class="card-body">
+                            <div class="card-body ">
                                 <p>
                                     As a program student, you are eligible to receive:
                                     <ul>
@@ -392,7 +396,7 @@
                     <div class="col-sm">
                         <div class="card bg-secondary mb-3" style="max-width: 36rem;">
                             <div class="card-header bg-info">
-                                <h5 class="card-title">HIGH SCHOOL DUAL CREDIT</h5>
+                                <h5 class="card-title font-weight-bold">HIGH SCHOOL DUAL CREDIT</h5>
                             </div>
                             <div class="card-body text-primary">
                                 <p class="card-text">Dual enrollment offers high school students an opportunity to get a head start in high-demand fields while earning college credits.</p>
@@ -405,7 +409,7 @@
                     <div class="col-sm">
                         <div class="card  bg-secondary mb-3" style="max-width: 36rem;">
                             <div class="card-header bg-warning">
-                                <h5 class="card-title">CREDIT FOR PRIOR LEARNING</h5>
+                                <h5 class="card-title font-weight-bold">CREDIT FOR PRIOR LEARNING</h5>
                             </div>
                             <div class="card-body text-primary">
                                 <p class="card-text">You may have the opportunity to obtain credit for the college-level skills and knowledge you've already acquired through prior coursework, work experience and more.</p>
@@ -448,7 +452,7 @@
             </div>
 
         </section>
-    </div>
+
 </body>
 <footer>
 
